@@ -11,7 +11,7 @@ before_script:
   - composer install --prefer-source --no-interaction --dev
 
 # Commands you want to run that will verify your build.
-script: phpunit --bootstrap vendor/autoload.php Latihan_PHPUnit/UnitTestingTest
+script: phpunit --bootstrap vendor/autoload.php phpunit/UnitTestingTest
 dist: trusty
 
 # allow_failures: Allow this build to fail under the specified environments.
