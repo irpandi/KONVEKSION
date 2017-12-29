@@ -11,6 +11,7 @@ session_start(); //menyimpan data di session
 	<head>
 		<title>KONVEKSION</title>
 		<link rel="stylesheet" type="text/css" href="assets/css/style2.css">
+		<link rel="stylesheet" type="text/css" href="assets/css/responsee-gaji-karyawan.css">
 		<link rel="shortcut icon" href="assets/img/ICON.png">
 	</head>
 	
@@ -122,15 +123,15 @@ session_start(); //menyimpan data di session
 						</table>
 
 						<table border="2px">
-						<tr>
-							<th>Jumlah Total</th>
-							<td><?php echo $var['jumlah_total']; ?></td>
-						</tr>
-						<tr>
-							<th>Gaji Total</th>
-							<td><?php echo $var['gaji_total']; ?></td>
-						</tr>
-					</table>
+							<tr>
+								<th>Jumlah Total</th>
+								<td><?php echo $var['jumlah_total']; ?></td>
+							</tr>
+							<tr>
+								<th>Gaji Total</th>
+								<td><?php echo $var['gaji_total']; ?></td>
+							</tr>
+						</table>
 				</div>
 				<!--EndDataDiri-->
 

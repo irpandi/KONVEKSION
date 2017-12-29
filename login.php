@@ -4,7 +4,7 @@ include ("koneksi/connection.php"); //koneksi ke database
 
 //mengambil data Post di index.html
 $username = $_POST['username'];
-$password = $_POST['password'];
+$password = md5($_POST['password']);
 
 //query untuk login admin
 $query2 = mysqli_query($connect, "SELECT * FROM tbl_admin WHERE username = '$username' AND password = '$password'");
@@ -22,7 +22,6 @@ if($x['username'] == $username AND $x['password'] == $password){
 
 	header("location:home-admin.php");
 
-//jika kondisi adalah username karyawan dan password karyawan, masuk ke halaman karyawan	
 }else if($y['username'] == $username AND $y['password'] == $password){
 	$_SESSION['username'] = $y['username'];
 	$_SESSION['password'] = $y['password'];
@@ -31,7 +30,6 @@ if($x['username'] == $username AND $x['password'] == $password){
 
 	header("location:home-karyawan.php");
 
-//jika username dan password salah maka akan kembali ke index.html	
 }else{
 	echo "<script>alert('username/password salah'); window.location = 'index.html'; </script>";
 }

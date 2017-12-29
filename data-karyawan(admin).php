@@ -16,6 +16,7 @@ if(empty($_SESSION['username'])){
 	<head>
 		<title>KONVEKSION</title>
 		<link rel="stylesheet" type="text/css" href="assets/css/style3.css">
+		<link rel="stylesheet" type="text/css" href="assets/css/responsee.css">
 		<link rel="shortcut icon" href="assets/img/ICON.png">
 	</head>
 	

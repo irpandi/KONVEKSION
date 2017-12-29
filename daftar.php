@@ -6,6 +6,7 @@
 
 	$username      = $_POST['username']; 			//mengambil method post dari register.html yg bernama username
 	$password      = $_POST['password']; 			//mengambil method post dari register.html yg bernama password
+	$rubah		   = md5($password); //rubah ke md5 untuk passwordnya
 	$nik           = $_POST['nik'];		 			//mengambil method post dari register.html yg bernama nik
 	$nama          = $_POST['nama'];	 			//mengambil method post dari register.html yg bernama nama
 	$ttl           = $_POST['ttl'];	     			//mengambil method post dari register.html yg bernama ttl
@@ -15,7 +16,6 @@
 	$bagian        = $_POST['bagian'];				//mengambil method post dari register.html yg bernama bagian
 	$foto		   = $_FILES['foto']['name'];		//mengambil method post dari register.html yg bernama foto dan name secara default
 	$tmp 		   = $_FILES['foto']['tmp_name'];	//mengambil method post dari register.htmk yg bernama foto dan menyimpan foto sementara	
-
 	$max_size	   = 1024000;						//maximum size = 1 MB dalam byte
 	$valid_file	   = true;							//menentukan file yg valid untuk di masukkan ke database
 	$image_path	   = pathinfo($_FILES['foto']['name'], PATHINFO_EXTENSION);		//membuat variabel untuk menentukan extensi format file foto
@@ -56,7 +56,7 @@
 	}else{
 
 		if(move_uploaded_file($tmp, $path)){	//kondisi jika file di move ke variable path dan tmp kemudian disimpan ke database
-		$daftar = mysqli_query($connect, "INSERT INTO tbl_data (username,password,nik,nama,foto,ttl,jenis_kelamin,nomor_telepon,alamat,bagian) VALUES ('$username','$password','$nik','$nama','$fotobaru','$ttl','$j_k','$nomor_telepon','$alamat','$bagian')");
+		$daftar = mysqli_query($connect, "INSERT INTO tbl_data (username,password,nik,nama,foto,ttl,jenis_kelamin,nomor_telepon,alamat,bagian) VALUES ('$username','$rubah','$nik','$nama','$fotobaru','$ttl','$j_k','$nomor_telepon','$alamat','$bagian')");
 
 			if($daftar){ //jika semua telah diisi maka akan kembali ke index.html
 				echo "<script>alert('Berhasil Daftar'); window.location = 'index.html'; </script>";
