@@ -4,7 +4,6 @@ table {
 	border-collapse:collapse;
 	width:100%;
 	}
-table tr td, table tr th {padding:0.325em;}
 table tfoot, table thead {background:none repeat scroll 0 0 #e0e0e0;}
 table tr:nth-of-type(2n) {background:none repeat scroll 0 0 #e0e0e0;}	
 td {border-right:2px solid black;}

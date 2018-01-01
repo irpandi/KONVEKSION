@@ -26,7 +26,7 @@
 	$query = mysqli_query($connect, "DELETE FROM tbl_data WHERE id_karyawan = '$id'");
 
 		if($query){ //jika query berhasil
-			echo "<script>alert('Data sudah dihapus'); window.location = 'data-karyawan(admin).php'; </script>";
+			echo "<script>alert('Data Berhasil dihapus'); window.location = 'data-karyawan(admin).php'; </script>";
 		}else{ //jika query gagal
 			echo "<script>alert('Data gagal dihapus'); window.location = 'data-karyawan(admin).php'; </script>";
 		}	
@@ -39,7 +39,7 @@
 	$query = mysqli_query($connect, "DELETE FROM tbl_data WHERE id_karyawan = '$id'");
 
 		if($query){ //jika query berhasil
-			echo "<script>alert('Data sudah dihapus'); window.location = 'data-gaji-karyawan(admin).php'; </script>";
+			echo "<script>alert('Data Berhasil dihapus'); window.location = 'data-gaji-karyawan(admin).php'; </script>";
 		}else{ //jika gagal
 			echo "<script>alert('Data gagal dihapus'); window.location = 'data-gaji-karyawan(admin).php'; </script>";
 		}	
@@ -52,9 +52,9 @@
 	$query = mysqli_query($connect, "DELETE FROM tbl_riwayat WHERE id_riwayat = '$id'");
 
 		if($query){ //jika query berhasil
-			echo "<script>alert('Data sudah dihapus'); window.location = 'riwayat-penggajian(admin).php'; </script>";
+			echo "<script>alert('Data Berhasil dihapus'); window.location = 'riwayat-penggajian(admin).php'; </script>";
 		}else{ //jika query gagal
-			echo "<script>alert('Data gagal dihapus'); window.location = 'riwayat-penggajian(admin).php'; </script>";
+			echo "<script>alert('Data Gagal dihapus'); window.location = 'riwayat-penggajian(admin).php'; </script>";
 		}
 	}
 ?>
