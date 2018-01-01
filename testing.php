@@ -1,8 +1,6 @@
 <?php
-
-require_once "PHPUnit/Framework/TestCase.php";
  
-class tes extends PHPUnit_Framework_TestCase
+class testing extends PHPUnit_Framework_TestCase
 {
 	function testUsername()
 	{
