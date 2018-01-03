@@ -16,24 +16,24 @@
 			$this->assertFalse($result);
 		}
 
-		public function testupdate_and_insert_data_gaji_karyawan_admin(){
+		public function testUpdate_and_insert_data_gaji_karyawan_admin(){
 			$result = $this->UnitTesting->update_and_insert_data_gaji_karyawan_admin(1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1);
 			$this->assertFalse($result);
 		}
 
-		public function testdelete_data_karyawan_admin(){
+		public function testDelete_data_karyawan_admin(){
 			$result = $this->UnitTesting->delete_data_karyawan_admin(1);
-			$this->assertTrue($result);
+			$this->assertFalse($result);
 		}
 
-		public function testdelete_data_gaji_karyawan_admin(){
+		public function testDelete_data_gaji_karyawan_admin(){
 			$result = $this->UnitTesting->delete_data_gaji_karyawan_admin(1);
-			$this->assertTrue($result);
+			$this->assertFalse($result);
 		}
 
-		public function testdelete_data_riwayat_gaji_karyawan(){
+		public function testDelete_data_riwayat_gaji_karyawan(){
 			$result = $this->UnitTesting->delete_data_riwayat_gaji_karyawan(1);
-			$this->assertTrue($result);
+			$this->assertFalse($result);
 		}
 	}
 ?>
