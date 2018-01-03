@@ -1,6 +1,6 @@
 language: php
 php: "7.0"
-services: mysqli
+services: mysqld
 before_install:
  mysqli -e 'CREATE DATABASE konveksion;'
 before_script:
