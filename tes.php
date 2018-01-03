@@ -1,6 +1,6 @@
 <?php
  
-class testing extends PHPUnit_Framework_TestCase
+class tes extends PHPUnit_Framework_TestCase
 {
 	function testUsername()
 	{

@@ -149,7 +149,6 @@ if(empty($_SESSION['username'])){ //jika session username kosong
 						<li><a href="#"><img src="assets/img/twitter.png"width="50" height="50"></a></li>
 					</ul>
 					<br></br>
-					<h3>Jangan ragu, tunggu apa lagi??</h3>
 				</div>
 				
 				<div class="drop-us-location">
