@@ -1,23 +1,13 @@
-# Required to run your project under the correct environment.
 language: php
-
-# Versions of PHP you want your project run with.
-php:
-  - '7.0.25'
-
-# Commands to be run before your environment runs.
-before_install : composer install
+php: "5.6"
+services: mysql
+before_install:
+ mysql -e 'CREATE DATABASE konveksion;'
 before_script:
-  - composer self-update --rollback
-  - composer install --prefer-source --no-interaction --dev
-
-
-# Commands you want to run that will verify your build.
-script: phpunit UnitTestingTest
-
-# allow_failures: Allow this build to fail under the specified environments.
-# fast_finish: If your build fails do not continue trying to build, just stop.
+  - curl -s http://getcomposer.org/installer | php
+  - php composer.phar install 
+script: phpunit UnitTestingTest.php
 matrix:
-  allow_failures:
-    - php: 7.0.25
-  fast_finish: true
+ allow_failures: 
+  php: "5.6"
+ fast_finish: true
