@@ -49,7 +49,7 @@
 		
 		//query
 		$sql = mysqli_query($connect, "SELECT * FROM tbl_data WHERE id_karyawan = '$id'");
-		$fetch = mysqli_fetch_array($sql);
+		//$fetch = mysqli_fetch_array($sql);
 		//unlink("images/".$fetch['foto']);
 
 		$query = mysqli_query($connect, "DELETE FROM tbl_data WHERE id_karyawan = '$id'");
