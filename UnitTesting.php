@@ -62,35 +62,5 @@
 				//echo "<script>alert('Data gagal dihapus'); window.location = 'data-karyawan(admin).php'; </script>";
 			}	
 		}
-
-		public function delete_data_gaji_karyawan_admin($id){ //fungsi untuk delete data-gaji-karyawan(admin).php dengan parameter id
-		include ("koneksi/connection.php"); //koneksi ke database
-
-		//query
-		$query = mysqli_query($connect, "DELETE FROM tbl_data WHERE id_karyawan = '$id'");
-
-			if($query){ //jika query berhasil
-				return false;
-				//echo "<script>alert('Data Berhasil dihapus'); window.location = 'data-gaji-karyawan(admin).php'; </script>";
-			}else{ //jika gagal
-				return true;
-				//echo "<script>alert('Data gagal dihapus'); window.location = 'data-gaji-karyawan(admin).php'; </script>";
-			}	
-		}
-
-		public function delete_data_riwayat_gaji_karyawan($id){ //fungsi untuk delete di riwayat-penggajian(admin).php dengan parameter id
-		include ("koneksi/connection.php"); //koneksi ke database
-
-		//query
-		$query = mysqli_query($connect, "DELETE FROM tbl_riwayat WHERE id_riwayat = '$id'");
-
-			if($query){ //jika query berhasil
-				return false;
-				//echo "<script>alert('Data Berhasil dihapus'); window.location = 'riwayat-penggajian(admin).php'; </script>";
-			}else{ //jika query gagal
-				return true;
-				//echo "<script>alert('Data Gagal dihapus'); window.location = 'riwayat-penggajian(admin).php'; </script>";
-			}
-		}		
 	}
 ?>
