@@ -6,7 +6,7 @@
 			$this->UnitTesting = new UnitTesting();
 		}
 
-		public function testRead(){
+		public function testSelect(){
 			$result = $this->UnitTesting->select();
 			$this->assertFalse($result);
 		}
