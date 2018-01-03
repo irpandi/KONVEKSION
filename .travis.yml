@@ -1,13 +1,13 @@
 language: php
-php: "7.0"
-services: mysqld
+php: "5.6"
+services: mysql
 before_install:
- mysqli -e 'CREATE DATABASE konveksion;'
+ mysql -e 'CREATE DATABASE konveksion;'
 before_script:
   - curl -s http://getcomposer.org/installer | php
   - php composer.phar install 
 script: phpunit UnitTestingTest.php
 matrix:
  allow_failures: 
-  php: "7.0"
+  php: "5.6"
  fast_finish: true
