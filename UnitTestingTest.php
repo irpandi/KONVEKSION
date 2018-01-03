@@ -20,10 +20,5 @@
 			$result = $this->UnitTesting->update_and_insert_data_gaji_karyawan_admin(1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1);
 			$this->assertFalse($result);
 		}
-
-		public function testDelete_data_karyawan_admin(){
-			$result = $this->UnitTesting->delete_data_karyawan_admin(1);
-			$this->assertFalse($result);
-		}
 	}
 ?>

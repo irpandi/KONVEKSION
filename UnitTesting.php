@@ -43,24 +43,5 @@
 				return false;
 			}
 		}
-
-		public function delete_data_karyawan_admin($id){ //fungsi untuk delete data-karyawan(admin).php dengan parameter id.
-		include ("koneksi/connection.php"); //koneksi ke database
-		
-		//query
-		$sql = mysqli_query($connect, "SELECT * FROM tbl_data WHERE id_karyawan = '$id'");
-		//$fetch = mysqli_fetch_array($sql);
-		//unlink("images/".$fetch['foto']);
-
-		$query = mysqli_query($connect, "DELETE FROM tbl_data WHERE id_karyawan = '$id'");
-
-			if($query){ //jika query berhasil
-				return false;
-				//echo "<script>alert('Data Berhasil dihapus'); window.location = 'data-karyawan(admin).php'; </script>";
-			}else{ //jika query gagal
-				return true;
-				//echo "<script>alert('Data gagal dihapus'); window.location = 'data-karyawan(admin).php'; </script>";
-			}	
-		}
 	}
 ?>
