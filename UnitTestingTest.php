@@ -8,12 +8,12 @@
 
 		public function testSelect(){
 			$result = $this->UnitTesting->select();
-			$this->assertTrue($result);
+			$this->assertFalse($result);
 		}
 
 		public function testDelete(){
 			$result = $this->UnitTesting->delete_data(1);
-			$this->assertTrue($result);
+			$this->assertFalse($result);
 		}
 	}
 ?>
