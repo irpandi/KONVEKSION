@@ -15,5 +15,15 @@
 			$result = $this->UnitTesting->delete_data(1);
 			$this->assertFalse($result);
 		}
+
+		public function testUsernameFalse(){
+			$result = $this->UnitTesting->UsernameFalse();
+			$this->assertFalse($result);
+		}
+
+		public function testPasswordFalse(){
+			$result = $this->UnitTesting->PasswordFalse();
+			$this->assertFalse($result);
+		}
 	}
 ?>

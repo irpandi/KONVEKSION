@@ -6,9 +6,9 @@
 			$query = mysqli_query($connect,$sql);
 
 			if($query)
-				return true;
-			else
 				return false;
+			else
+				return true;
 		}
 
 		public function delete_data($id){
@@ -18,12 +18,34 @@
 		$query = mysqli_query($connect, "DELETE FROM tbl_riwayat WHERE id_karyawan = '$id'");
 
 			if($query){ //jika query berhasil
-				return true;
+				return false;
 				//echo "<script>alert('Data sudah dihapus'); window.location = 'riwayat-penggajian(admin).php'; </script>";
 			}else{ //jika query gagal
-				return false;
+				return true;
 				//echo "<script>alert('Data gagal dihapus'); window.location = 'riwayat-penggajian(admin).php'; </script>";
 			}
 		}
+	
+		public function UsernameFalse()
+		{
+			include ("koneksi/connection.php");
+			$login = mysqli_query($connect, "SELECT * FROM tbl_admin WHERE password = 'adminsatu'");
+			$user = mysqli_fetch_array($login);
+			$test_user = $user['username'];
+		
+			$content = $test_user;
+			$this->assertFalse('admin',$content);
+		}
+	
+		public function PasswordFalse()
+		{
+			include ("koneksi/connection.php");
+			$login = mysqli_query($connect, "SELECT * FROM tbl_admin WHERE username = 'admin01'");
+			$user = mysqli_fetch_array($login);
+			$test_user = $user['password'];
+			
+			$content = $test_user;
+			$this->assertFalse('admin',$content);
+		}			
 	}
 ?>
