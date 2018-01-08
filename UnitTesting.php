@@ -1,27 +1,20 @@
 <?php
 	class UnitTesting{
-		public function select(){
-			include ("koneksi/connection.php");
-			$sql = "SELECT * FROM tbl_data";
-			$query = mysqli_query($connect,$sql);
-
-			if($query){
-				return false;
-			}else{
-				return true;
-			}
+		public function gaji($bonus, $uang_makan, $kasbon){
+			$gaji = $bonus + $uang_makan - $kasbon;
+			return $gaji;
 		}
 
-		public function delete_data($id){
-			include ("koneksi/connection.php");
-			$sql = "DELETE FROM tbl_riwayat WHERE id_karyawan = '$id'";
-			$query = mysqli_query($connect, $sql);
+		public function gaji_total($uang_makan,$bonus,$kasbon,$banyak1,$banyak2,$banyak3,$harga1,$harga2,$harga3){
+			$gaji = $uang_makan + $bonus - $kasbon;
+			
+			$jumlah1 = $banyak1 * $harga1;
+			$jumlah2 = $banyak2 * $harga2;
+			$jumlah3 = $banyak3 * $harga3;
+			$jumlah_total = $jumlah1 + $jumlah2 + $jumlah3;
 
-			if($query){
-				return false;
-			}else{ 
-				return true;
-			}
+			$gaji_total = $gaji + $jumlah_total;
+			return $gaji_total;
 		}
 	}
 ?>
