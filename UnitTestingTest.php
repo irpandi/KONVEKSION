@@ -20,5 +20,25 @@
 			$result = $this->UnitTesting->jumlah_total(10,10,10,1000,1000,1000);
 			$this->assertEquals(30000,$result);
 		}
+
+		public	function testUsernameFalse(){
+			include ("koneksi/connection.php");
+			$login = mysqli_query($connect, "SELECT * FROM tbl_admin WHERE username = 'admin01'");
+			$user = mysqli_fetch_array($login);
+			$test_user = $user['username'];
+				
+			$content = $test_user;
+			$this->assertNotEquals('admin',$content);
+		}
+
+		public	function testPasswordFalse(){
+			include ("koneksi/connection.php");
+			$login = mysqli_query($connect, "SELECT * FROM tbl_admin WHERE password = 'adminsatu'");
+			$user = mysqli_fetch_array($login);
+			$test_user = $user['password'];
+				
+			$content = $test_user;
+			$this->assertNotEquals('admin',$content);
+		}
 	}
 ?>
