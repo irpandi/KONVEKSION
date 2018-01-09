@@ -5,6 +5,16 @@
 			return $gaji;
 		}
 
+
+		public function jumlah_total($banyak1,$banyak2,$banyak3,$harga1,$harga2,$harga3){
+			$jumlah1 = $banyak1 * $harga1;
+			$jumlah2 = $banyak2 * $harga2;
+			$jumlah3 = $banyak3 * $harga3;
+			$jumlah_total = $jumlah1 + $jumlah2 + $jumlah3;
+
+			return $jumlah_total; 
+		}
+
 		public function gaji_total($uang_makan,$bonus,$kasbon,$banyak1,$banyak2,$banyak3,$harga1,$harga2,$harga3){
 			$gaji = $uang_makan + $bonus - $kasbon;
 			
