@@ -1,6 +1,5 @@
 <?php
 	require 'UnitTesting.php';
-	require_once 'PHPUnit/Framework/TestCase.php';
 
 	class UnitTestingTest extends PHPUnit_Framework_TestCase{
 		protected function setUp(){
